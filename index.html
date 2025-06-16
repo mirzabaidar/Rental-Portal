@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car/Equipment Rental System</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <h1>Rental System Dashboard</h1>
+  </header>
+
+  <main>
+    <section id="inventory">
+      <h2>Available Items</h2>
+      <div class="inventory-grid">
+        <div class="inventory-item">
+          <div class="item-image-container">
+            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Car" class="item-image">
+            <div class="item-overlay">
+              <button class="book-btn" data-item="Car">
+                <i class="fas fa-calendar-plus"></i> Book Now
+              </button>
+            </div>
+          </div>
+          <div class="item-details">
+            <h3><i class="fas fa-car"></i> Car</h3>
+            <span class="status available"><i class="fas fa-check-circle"></i> Available</span>
+            <p class="item-description">Luxury car available for rent. Perfect for special occasions and business trips.</p>
+            <p class="item-price"><i class="fas fa-tag"></i> PKR 5,000/day</p>
+          </div>
+        </div>
+
+        <div class="inventory-item">
+          <div class="item-image-container">
+            <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Camera" class="item-image">
+            <div class="item-overlay">
+              <button class="book-btn" data-item="Camera">
+                <i class="fas fa-calendar-plus"></i> Book Now
+              </button>
+            </div>
+          </div>
+          <div class="item-details">
+            <h3><i class="fas fa-camera"></i> Camera</h3>
+            <span class="status available"><i class="fas fa-check-circle"></i> Available</span>
+            <p class="item-description">Professional DSLR camera with multiple lenses. Ideal for photography enthusiasts.</p>
+            <p class="item-price"><i class="fas fa-tag"></i> PKR 2,000/day</p>
+          </div>
+        </div>
+
+        <div class="inventory-item">
+          <div class="item-image-container">
+            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Guest House" class="item-image">
+            <div class="item-overlay">
+              <button class="book-btn" data-item="Guest House">
+                <i class="fas fa-calendar-plus"></i> Book Now
+              </button>
+            </div>
+          </div>
+          <div class="item-details">
+            <h3><i class="fas fa-home"></i> Guest House</h3>
+            <span class="status available"><i class="fas fa-check-circle"></i> Available</span>
+            <p class="item-description">Comfortable guest house with modern amenities. Perfect for family vacations.</p>
+            <p class="item-price"><i class="fas fa-tag"></i> PKR 8,000/day</p>
+          </div>
+        </div>
+
+        <div class="inventory-item">
+          <div class="item-image-container">
+            <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Flat" class="item-image">
+            <div class="item-overlay">
+              <button class="book-btn" data-item="Flat">
+                <i class="fas fa-calendar-plus"></i> Book Now
+              </button>
+            </div>
+          </div>
+          <div class="item-details">
+            <h3><i class="fas fa-building"></i> Flat</h3>
+            <span class="status available"><i class="fas fa-check-circle"></i> Available</span>
+            <p class="item-description">Modern apartment in prime location. Suitable for long-term stays.</p>
+            <p class="item-price"><i class="fas fa-tag"></i> PKR 6,000/day</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="dashboard">
+      <h2>Rental Status Dashboard</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Date</th>
+            <th>Days</th>
+            <th>Deposit</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="rentalStatus"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="index.js"></script>
+</body>
+</html>
